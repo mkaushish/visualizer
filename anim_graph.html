@@ -1,0 +1,60 @@
+<html>
+<head>
+	<script type="text/JavaScript" src="./Anim_Graph/graph_new.js"></script>
+	<script type="text/JavaScript" src="./Anim_Graph/graph_out.js"></script>
+	<script type="text/JavaScript" src="./Anim_Graph/graph_parse.js"></script>
+	<script type="text/JavaScript" src="./Anim_Graph/graph_pz.js"></script>
+	<script type="text/JavaScript" src="./Anim_Graph/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	<div id=graphcalc style="position:relative">
+		<canvas id="canvas" style="background-color:white;" width=800 height=800>
+			Your browser does not support the HTML5 Canvas feature. This app uses new HTML5 features and will only work on the latest versions of Firefox, Safari or Chrome (and maybe Internet Explorer 9).         
+		</canvas>   
+		<div id=inp style="float:left">
+			<label for="fninp">f(x) = </label>
+			<input type="text" id="fninp" style="width:800px"></input>
+			<br></br>
+		</div>
+		<div id="curves">
+			<div class="shape" style="background-color:gray;" id="s_0">
+				select
+			</div>
+		</div>
+		<button id='animate'>Animate</button>
+		<script>
+		graph_new("canvas");
+		</script>
+	</div>
+	<style type="text/css">
+	html, body {
+		overflow: none;
+	}
+	#curves {
+		position:absolute;
+		top:0px;
+		left:100px;
+    width:168px;
+	}
+		.shape {
+			float:left;
+			width:130px;
+			padding:2px;
+			margin:5px;
+			margin-left:8px;
+			text-align:center;
+			color:white;
+			font-family:Courier;
+			font-size:12px;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			border-radius: 10px; /* future proofing */
+			-khtml-border-radius: 10px; /* for old Konqueror browsers */
+			i {
+				float:right;
+				margin-top:2px;
+			}
+		}
+	</style>
+</body>
+</html>
